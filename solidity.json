@@ -1,0 +1,99 @@
+{
+	// Place your snippets for solidity here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+    //Functions
+    "Create a Forge Test Function": {
+        "prefix": "test",
+    "body": [
+            "function test${1:Name}_Should${2:DoSomething}_When${3:SomethingHappens}() public {",
+            "    //setUp",
+            "    //execution",
+            "    //assert",
+            "    //setUp$0",
+            "}",
+        ],
+        "description": "Creates a Forge test function"
+    },
+
+    "Create a Forge Setup Function": {
+        "prefix": "setUp",
+        "body": [
+            "function setUp() public {",
+            "    vm = Vm(HEVM_ADDRESS);$0 ",
+            "}",
+        ],
+        "description": "Creates a Forge setUp function"
+    },
+
+    // events
+    "Create an event": {
+        "prefix": "event",
+        "body": [
+            "event ${1:Name}(${2:Params});"
+        ],
+        "description": "Creates a Solidity event"
+    },
+
+      // events
+      "Emit event test": {
+        "prefix": "expect emit",
+        "body": [
+            "vm.expectEmit(${1:true}, ${2:true}, ${3:true},${4:true});",
+            "emit ${5:Name}(${6:Params});"
+        ],
+        "description": "Creates an event test"
+    },
+
+    // Cheatcodes
+    "Prank": {
+        "prefix": "prank",
+        "body": [
+            "vm.prank(${1:address});",
+        ],
+        "description": "Creates a prank"
+    },
+
+    "Start Prank": {
+        "prefix": "start prank",
+        "body": [
+            "vm.startPrank(${1:address});",
+        ],
+        "description": "Start a prank"
+    },
+
+    "Stop Prank": {
+        "prefix": "stop prank",
+        "body": [
+            "vm.stopPrank();",
+        ],
+        "description": "Stops a prank"
+    },
+
+    "Deal": {
+        "prefix": "deal",
+        "body": [
+            "vm.deal(${1:address},${2:amount});",
+        ],
+        "description": "Creates a deal"
+    },
+
+    "Expect Revert": {
+        "prefix": "expect revert",
+        "body": [
+            "vm.expectRevert(\"${1:String}\");",
+        ],
+        "description": "Expects a revert"
+    }
+}
