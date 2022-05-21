@@ -38,7 +38,7 @@ Snippets for prank, startPrank, StopPrank and Deal cheatcodes.
 ![5](https://user-images.githubusercontent.com/578688/169672285-f6974198-5895-41cc-bedf-ec437b1b26fc.gif)
 
 ### Expect Event
-Snippet for emit and expect event emition. 
+Snippet for emit and expect event emition.
 ![6](https://user-images.githubusercontent.com/578688/169672286-c8be659d-a4e4-485f-b0e4-63d996d7eb46.gif)
 
 ### Expect Revert
