@@ -18,6 +18,12 @@ Simple boilerplate structure for a test contract.
 
 ![1](https://user-images.githubusercontent.com/578688/169672205-7f988aee-99a8-4d46-8e1a-c27419887a95.gif)
 
+### Script
+Simple boilerplate structure for a script contract.
+
+![script](https://user-images.githubusercontent.com/578688/171066931-b69c0fce-ce5b-4a94-96b0-461fa7745e3f.gif)
+
+
 ### Event
 A simple event.
 
