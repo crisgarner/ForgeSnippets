@@ -1,99 +1,110 @@
 {
-	// Place your snippets for solidity here. Each snippet is defined under a snippet name and has a prefix, body and
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
+  // Place your snippets for solidity here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
 
-    //Functions
-    "Create a Forge Test Function": {
-        "prefix": "test",
+  //Init
+  "Creates a boilerplate contract": {
+    "prefix": "init",
     "body": [
-            "function test${1:Name}_Should${2:DoSomething}_When${3:SomethingHappens}() public {",
-            "    //setUp",
-            "    //execution",
-            "    //assert",
-            "    //setUp$0",
-            "}",
-        ],
-        "description": "Creates a Forge test function"
-    },
+      "pragma solidity ${1:0.8.0};",
+      "import \"forge-std/Test.sol\";",
+      "contract ${2:Name} is Test {$0}"
+    ],
+    "description": "Creates an initial test contract"
+  },
 
-    "Create a Forge Setup Function": {
-        "prefix": "setUp",
-        "body": [
-            "function setUp() public {",
-            "    vm = Vm(HEVM_ADDRESS);$0 ",
-            "}",
-        ],
-        "description": "Creates a Forge setUp function"
-    },
+  //Script
+  "Creates a boilerplate script contract": {
+    "prefix": "script",
+    "body": [
+      "pragma solidity ${1:0.8.0};",
+      "import \"forge-std/Script.sol\";",
+      "contract ${2:Name} is Script{",
+      "    function run() public {",
+      "        vm.startBroadcast();",
+      "        $0",
+      "    }",
+      "}"
+    ],
+    "description": "Creates an initial test contract"
+  },
 
-    // events
-    "Create an event": {
-        "prefix": "event",
-        "body": [
-            "event ${1:Name}(${2:Params});"
-        ],
-        "description": "Creates a Solidity event"
-    },
+  //Functions
+  "Create a Forge Test Function": {
+    "prefix": "test",
+    "body": [
+      "function test${1:Name}_Should${2:DoSomething}_When${3:SomethingHappens}() public {",
+      "    //setUp",
+      "    //execution",
+      "    //assert",
+      "    //setUp$0",
+      "}"
+    ],
+    "description": "Creates a Forge test function"
+  },
 
-      // events
-      "Emit event test": {
-        "prefix": "expect emit",
-        "body": [
-            "vm.expectEmit(${1:true}, ${2:true}, ${3:true},${4:true});",
-            "emit ${5:Name}(${6:Params});"
-        ],
-        "description": "Creates an event test"
-    },
+  "Create a Forge Setup Function": {
+    "prefix": "setUp",
+    "body": ["function setUp() public {", "    vm = Vm(HEVM_ADDRESS);$0 ", "}"],
+    "description": "Creates a Forge setUp function"
+  },
 
-    // Cheatcodes
-    "Prank": {
-        "prefix": "prank",
-        "body": [
-            "vm.prank(${1:address});",
-        ],
-        "description": "Creates a prank"
-    },
+  // events
+  "Create an event": {
+    "prefix": "event",
+    "body": ["event ${1:Name}(${2:Params});"],
+    "description": "Creates a Solidity event"
+  },
 
-    "Start Prank": {
-        "prefix": "start prank",
-        "body": [
-            "vm.startPrank(${1:address});",
-        ],
-        "description": "Start a prank"
-    },
+  // events
+  "Emit event test": {
+    "prefix": "expect emit",
+    "body": [
+      "vm.expectEmit(${1:true}, ${2:true}, ${3:true},${4:true});",
+      "emit ${5:Name}(${6:Params});"
+    ],
+    "description": "Creates an event test"
+  },
 
-    "Stop Prank": {
-        "prefix": "stop prank",
-        "body": [
-            "vm.stopPrank();",
-        ],
-        "description": "Stops a prank"
-    },
+  // Cheatcodes
+  "Prank": {
+    "prefix": "prank",
+    "body": ["vm.prank(${1:address});"],
+    "description": "Creates a prank"
+  },
 
-    "Deal": {
-        "prefix": "deal",
-        "body": [
-            "vm.deal(${1:address},${2:amount});",
-        ],
-        "description": "Creates a deal"
-    },
+  "Start Prank": {
+    "prefix": "start prank",
+    "body": ["vm.startPrank(${1:address});"],
+    "description": "Start a prank"
+  },
 
-    "Expect Revert": {
-        "prefix": "expect revert",
-        "body": [
-            "vm.expectRevert(\"${1:String}\");",
-        ],
-        "description": "Expects a revert"
-    }
+  "Stop Prank": {
+    "prefix": "stop prank",
+    "body": ["vm.stopPrank();"],
+    "description": "Stops a prank"
+  },
+
+  "Deal": {
+    "prefix": "deal",
+    "body": ["vm.deal(${1:address},${2:amount});"],
+    "description": "Creates a deal"
+  },
+
+  "Expect Revert": {
+    "prefix": "expect revert",
+    "body": ["vm.expectRevert(\"${1:String}\");"],
+    "description": "Expects a revert"
+  }
 }
