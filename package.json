@@ -1,0 +1,26 @@
+{
+  "name": "foundry-snippets",
+  "displayName": "Forge Snippets",
+  "version": "1.0.2",
+  "description": "Forge Snippets for VS Code",
+  "publisher": "Crisgarner",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.6.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "solidity",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crisgarner/ForgeSnippets.git"
+  }
+}

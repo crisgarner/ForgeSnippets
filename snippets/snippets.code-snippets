@@ -200,10 +200,10 @@
     "description": "Sets the coinbase for theblock"
   },
 
-  "Assmue": {
+  "Assume": {
     "prefix": "assume",
     "body": ["vm.assume(${1:condition});"],
-    "description": "Assumes a given condition	is true"
+    "description": "Assumes a given condition is true"
   },
 
   "Get address": {
