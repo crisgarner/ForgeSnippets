@@ -4,7 +4,17 @@ Forge Snippets for VS Code.
 
 ## Installation
 
-Install this extension on VS Code marketplace.
+### Vs Code Marketplace
+
+Install this extension on VS Code marketplace. on the following place: https://marketplace.visualstudio.com/items?itemName=Crisgarner.foundry-snippets
+
+### VSIX
+
+For users who want to use a VSIX file, they can install the extension with the following command:
+
+```bash
+ code --install-extension releases/foundry-snippets-1.0.0.vsix
+```
 
 ## Snippets
 
