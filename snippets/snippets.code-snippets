@@ -47,8 +47,7 @@
       "function test${1:Name}_Should${2:DoSomething}_When${3:SomethingHappens}() public {",
       "    //setUp",
       "    //execution",
-      "    //assert",
-      "    //setUp$0",
+      "    //assert$0",
       "}"
     ],
     "description": "Creates a Forge test function"
