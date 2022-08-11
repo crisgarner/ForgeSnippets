@@ -55,7 +55,7 @@
 
   "Create a Forge Setup Function": {
     "prefix": "setUp",
-    "body": ["function setUp() public {", "    vm = Vm(HEVM_ADDRESS);$0 ", "}"],
+    "body": ["function setUp() public {$0}"],
     "description": "Creates a Forge setUp function"
   },
 
