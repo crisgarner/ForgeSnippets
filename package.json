@@ -1,7 +1,7 @@
 {
   "name": "foundry-snippets",
   "displayName": "Forge Snippets",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Forge Snippets for VS Code",
   "publisher": "Crisgarner",
   "icon": "logo.png",

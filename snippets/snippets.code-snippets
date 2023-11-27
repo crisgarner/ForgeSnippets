@@ -44,7 +44,7 @@
   "Create a Forge Test Function": {
     "prefix": "test",
     "body": [
-      "function test${1:Name}_Should${2:DoSomething}_When${3:SomethingHappens}() public {",
+      "function test_${1:Name}_Should${2:DoSomething}_When${3:SomethingHappens}() public {",
       "    //setUp",
       "    //execution",
       "    //assert$0",
